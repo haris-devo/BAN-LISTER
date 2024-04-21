@@ -1,3 +1,4 @@
+import DiscordLogo from "../../public/assets/logo/pngwing.com.png";
 const Footer = () => {
   const linkProps = {
     className: "text-black underline",
@@ -31,11 +32,7 @@ const Footer = () => {
       {/* footer right  */}
       <div className="flex items-center space-x-3">
         {/* Discord Logo  */}
-        <img
-          src="../../public/assets/logo/pngwing.com.png"
-          className="h-4"
-          alt="Discord Logo"
-        />
+        <img src={DiscordLogo} className="h-4" alt="Discord Logo" />
         <span>|</span>
         <a href="https://github.com/itsmeharsh" {...linkProps}>
           Terms of Service

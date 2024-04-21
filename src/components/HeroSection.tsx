@@ -1,6 +1,7 @@
 import FormSection from "./FormSection";
 import NumbersSection from "./NumbersSection";
 import ImageLogo from "../../public/assets/logo/logo.png";
+import backgroundImage from "../../public/rust_initial_background.png";
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
 const BackgroundImage = () => {
   return (
     <img
-      src="../../public/rust_initial_background.png"
+      src={backgroundImage}
       className="absolute inset-0 object-cover w-full h-full"
       alt=""
     />
