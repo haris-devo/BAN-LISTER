@@ -20,7 +20,7 @@ const HeroSection = () => {
 const BackgroundImage = () => {
   return (
     <img
-      src="/public/rust_initial_background.png"
+      src="../../public/rust_initial_background.png"
       className="absolute inset-0 object-cover w-full h-full"
       alt=""
     />

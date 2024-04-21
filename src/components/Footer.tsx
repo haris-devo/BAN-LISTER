@@ -32,7 +32,7 @@ const Footer = () => {
       <div className="flex items-center space-x-3">
         {/* Discord Logo  */}
         <img
-          src="/src/assets/logo/pngwing.com.png"
+          src="../../public/assets/logo/pngwing.com.png"
           className="h-4"
           alt="Discord Logo"
         />
