@@ -1,5 +1,6 @@
 import FormSection from "./FormSection";
 import NumbersSection from "./NumbersSection";
+import ImageLogo from "../../public/assets/logo/logo.png";
 
 const HeroSection = () => {
   return (
@@ -56,9 +57,7 @@ const ContentSection = () => {
 };
 
 const Logo = () => {
-  return (
-    <img src="/public/assets/logo/logo.png" alt="" className="w-full h-full" />
-  );
+  return <img src={ImageLogo} alt="" className="w-full h-full" />;
 };
 
 const SearchForm = () => {
