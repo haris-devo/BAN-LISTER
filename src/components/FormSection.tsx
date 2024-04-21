@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import {
+  IFormData,
+  IFormInputProps,
+  IFormSelectProps,
+} from "../interfaces/FormSection";
 
+// Array of countries for the select input
 const countries: string[] = [
   "Afghanistan",
   "Aland Islands",
@@ -13,16 +19,10 @@ const countries: string[] = [
   "Antigua and Barbuda",
 ];
 
-interface FormData {
-  name: string;
-  country: string;
-  streamProfile: string;
-  email: string;
-  website: string;
-}
-
+// FormSection component definition
 const FormSection: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  // State for form data
+  const [formData, setFormData] = useState<IFormData>({
     name: "",
     country: "",
     streamProfile: "",
@@ -30,6 +30,7 @@ const FormSection: React.FC = () => {
     website: "",
   });
 
+  // Function to handle input change
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ): void => {
@@ -40,19 +41,22 @@ const FormSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (_e: React.FormEvent<HTMLFormElement>): void => {
+  // Function to handle form submission
+  const handleSubmit = (): void => {
     // Do something with form data, for example, submit it to a server
     console.log(formData);
   };
 
   return (
-    <div className="text-black  py-2 bg-white/40">
+    // Container for the form section
+    <div className="text-black py-2 bg-white/40">
       <div className="h-full w-full flex items-center justify-center py-5">
         <div className="bg-[#F9F9F9] w-11/12 md:w-1/2 flex justify-center p-4 md:p-8 shadow-lg">
           <form
             onSubmit={handleSubmit}
             className="w-full max-w-4xl mx-auto flex flex-col gap-3"
           >
+            {/* Form inputs */}
             <FormInput
               label="Name"
               type="text"
@@ -92,6 +96,7 @@ const FormSection: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Community Website"
             />
+            {/* Submit button */}
             <div className="flex flex-col gap-1">
               <button
                 type="submit"
@@ -107,16 +112,8 @@ const FormSection: React.FC = () => {
   );
 };
 
-interface FormInputProps {
-  label: string;
-  type: string;
-  name: string;
-  value: string;
-  placeholder?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-const FormInput: React.FC<FormInputProps> = ({
+// FormInput component definition
+const FormInput: React.FC<IFormInputProps> = ({
   label,
   type,
   name,
@@ -125,9 +122,11 @@ const FormInput: React.FC<FormInputProps> = ({
   placeholder,
 }) => (
   <div className="flex flex-col gap-1">
+    {/* Input label */}
     <label htmlFor={name} className="text-black font-semibold text-sm">
       {label}
     </label>
+    {/* Input field */}
     <input
       type={type}
       name={name}
@@ -140,15 +139,8 @@ const FormInput: React.FC<FormInputProps> = ({
   </div>
 );
 
-interface FormSelectProps {
-  label: string;
-  name: string;
-  options: string[];
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-}
-
-const FormSelect: React.FC<FormSelectProps> = ({
+// FormSelect component definition
+const FormSelect: React.FC<IFormSelectProps> = ({
   label,
   name,
   options,
@@ -156,9 +148,11 @@ const FormSelect: React.FC<FormSelectProps> = ({
   onChange,
 }) => (
   <div className="flex flex-col gap-1 w-full md:w-1/2">
+    {/* Select label */}
     <label htmlFor={name} className="text-black font-semibold text-sm">
       {label}
     </label>
+    {/* Select input */}
     <select
       name={name}
       id={name}
@@ -166,6 +160,7 @@ const FormSelect: React.FC<FormSelectProps> = ({
       onChange={onChange}
       className="w-full p-2 py-1 border border-gray-300 text-black rounded text-sm"
     >
+      {/* Options */}
       {options.map((option) => (
         <option key={option} value={option}>
           {option}
@@ -175,4 +170,4 @@ const FormSelect: React.FC<FormSelectProps> = ({
   </div>
 );
 
-export default FormSection;
+export default FormSection; // Exporting FormSection component

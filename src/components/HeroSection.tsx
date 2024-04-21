@@ -3,6 +3,7 @@ import NumbersSection from "./NumbersSection";
 import ImageLogo from "../../public/assets/logo/logo.png";
 import backgroundImage from "../../public/rust_initial_background.png";
 
+// HeroSection component definition
 const HeroSection = () => {
   return (
     <div className="relative w-full h-full">
@@ -18,6 +19,7 @@ const HeroSection = () => {
   );
 };
 
+// BackgroundImage component definition
 const BackgroundImage = () => {
   return (
     <img
@@ -28,6 +30,7 @@ const BackgroundImage = () => {
   );
 };
 
+// LoginButton component definition
 const LoginButton = () => {
   return (
     <button className="absolute top-3 right-4 p-1 px-5 text-white bg-[#71A030] text-xs shadow-lg">
@@ -39,6 +42,7 @@ const LoginButton = () => {
   );
 };
 
+// ContentSection component definition
 const ContentSection = () => {
   return (
     <div className="px-4 pt-10 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-2 h-2/5">
@@ -57,10 +61,12 @@ const ContentSection = () => {
   );
 };
 
+// Logo component definition
 const Logo = () => {
   return <img src={ImageLogo} alt="" className="w-full h-full" />;
 };
 
+// SearchForm component definition
 const SearchForm = () => {
   return (
     <form className="max-w-4xl mx-auto mt-2">
@@ -86,6 +92,7 @@ const SearchForm = () => {
   );
 };
 
+// NewSection component definition
 const NewSection = () => {
   return (
     <div className="text-white bg-white/30 mt-5 py-2">
@@ -103,6 +110,7 @@ const NewSection = () => {
   );
 };
 
+// DownloadButton component definition
 const DownloadButton = () => {
   return (
     <button className="p-0.5 px-1 bg-[#3CB979] rounded flex space-x-1 items-center">
@@ -126,4 +134,4 @@ const DownloadButton = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection; // Exporting HeroSection component
