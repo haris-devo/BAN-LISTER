@@ -7,10 +7,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-200 py-2 flex justify-between items-center px-2">
+    <footer className="bg-gray-200 py-2 flex md:flex-row flex-col justify-between md:items-center px-2 gap-1 md:gap-0">
       {/* footer left  */}
-      <div className="flex items-center space-x-3">
-        <p className="text-sm text-black flex items-center space-x-1">
+      <div className="flex md:flex-row  items-center space-x-3">
+        <div className="md:text-sm text-black flex items-center space-x-1 text-xs">
           <span>©</span>
           <a href="https://github.com/itsmeharsh" {...linkProps}>
             BanLister.com
@@ -22,15 +22,15 @@ const Footer = () => {
             <a href="https://github.com/itsmeharsh" {...linkProps}>
               STEAM
             </a>
-            <sup> & </sup>
+            <span> & </span>
             <a href="https://github.com/itsmeharsh" {...linkProps}>
               Faded Servers
             </a>
           </div>
-        </p>
+        </div>
       </div>
       {/* footer right  */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 text-xs md:text-sm">
         {/* Discord Logo  */}
         <img src={DiscordLogo} className="h-4" alt="Discord Logo" />
         <span>|</span>
