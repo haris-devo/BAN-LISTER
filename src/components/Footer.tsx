@@ -12,18 +12,18 @@ const Footer = () => {
       <div className="flex md:flex-row  items-center space-x-3">
         <div className="md:text-sm text-black flex items-center space-x-1 text-xs">
           <span>©</span>
-          <a href="https://github.com/itsmeharsh" {...linkProps}>
+          <a href="https://www.google.com/" {...linkProps}>
             BanLister.com
           </a>
           <span>- 2019</span>
           <span>| Powered by </span>
           <div className="flex items-center space-x-1">
             <span>©</span>
-            <a href="https://github.com/itsmeharsh" {...linkProps}>
+            <a href="https://www.google.com/" {...linkProps}>
               STEAM
             </a>
             <span> & </span>
-            <a href="https://github.com/itsmeharsh" {...linkProps}>
+            <a href="https://www.google.com/" {...linkProps}>
               Faded Servers
             </a>
           </div>
@@ -34,7 +34,7 @@ const Footer = () => {
         {/* Discord Logo  */}
         <img src={DiscordLogo} className="h-4" alt="Discord Logo" />
         <span>|</span>
-        <a href="https://github.com/itsmeharsh" {...linkProps}>
+        <a href="https://www.google.com/" {...linkProps}>
           Terms of Service
         </a>
       </div>
