@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div>
       <HeroSection />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

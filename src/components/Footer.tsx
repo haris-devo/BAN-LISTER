@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   const linkProps = {
     className: "text-black underline",
