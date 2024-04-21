@@ -57,7 +57,7 @@ const ContentSection = () => {
 
 const Logo = () => {
   return (
-    <img src="/src/assets/logo/logo.png" alt="" className="w-full h-full" />
+    <img src="/public/assets/logo/logo.png" alt="" className="w-full h-full" />
   );
 };
 
