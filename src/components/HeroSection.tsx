@@ -3,22 +3,6 @@ import NumbersSection from "./NumbersSection";
 import ImageLogo from "../../public/assets/logo/logo.png";
 import backgroundImage from "../../public/rust_initial_background.png";
 
-// HeroSection component definition
-const HeroSection = () => {
-  return (
-    <div className="relative w-full h-full">
-      <BackgroundImage />
-      <LoginButton />
-      <div className="absolute inset-0 bg-black/30 opacity-50"></div>
-      <div className="relative h-full">
-        <ContentSection />
-        <NewSection />
-        <FormSection />
-      </div>
-    </div>
-  );
-};
-
 // BackgroundImage component definition
 const BackgroundImage = () => {
   return (
@@ -131,6 +115,22 @@ const DownloadButton = () => {
 
       <span>Download</span>
     </button>
+  );
+};
+
+// HeroSection component definition
+const HeroSection = () => {
+  return (
+    <div className="relative w-full h-full">
+      <BackgroundImage />
+      <LoginButton />
+      <div className="absolute inset-0 bg-black/30 opacity-50"></div>
+      <div className="relative h-full">
+        <ContentSection />
+        <NewSection />
+        <FormSection />
+      </div>
+    </div>
   );
 };
 
